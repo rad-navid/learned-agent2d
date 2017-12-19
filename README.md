@@ -3,7 +3,8 @@ In work, combines machine-learning techniques with computational algorithms, we 
 
 ## Credit 
 This work it built on top of HELIOS Base. 
+### Reference 
 Akiyama H., Nakashima T. (2014) HELIOS Base: An Open Source Package for the RoboCup Soccer 2D Simulation. In: Behnke S., Veloso M., Visser A., Xiong R. (eds) RoboCup 2013: Robot World Cup XVII. RoboCup 2013. Lecture Notes in Computer Science, vol 8371. Springer, Berlin, Heidelberg9-5262.
 
-##Demo
+## Demo
 [General Game] (https://youtu.be/F7XeI3S2ERY)
