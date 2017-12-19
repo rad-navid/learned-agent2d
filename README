@@ -1,49 +1,6 @@
-=======
-¤Ï¤¸¤á¤Ë
-=======
-agent2d¤Ïlibrcsc¤ò»ÈÍÑ¤·¤¿¥·¥ó¥×¥ë¤Ê¥Á¡¼¥à¤Î¼ÂÁõÎã¤Ç¤¹¡¥RoboCup Soccer
-Simulator(rcssserver)¥Ð¡¼¥¸¥ç¥ó15¤ÇÆ°ºî¤µ¤»¤ë¤³¤È¤òÁÛÄê¤·¤Æ¤¤¤Þ¤¹¡¥
+# Training a Simulated Soccer Agent to Optimize Goal Scoring
+In work, combines machine-learning techniques with computational algorithms, we have been able to find the optimal time and best point in the goal to maximize chance of scoring. We have been able to increase agentâ€™s shoot accuracy by a factor of 97.2%.  We have also been able to achieve a more maintainable source code by replacing major part of computational algorithms used to define agentâ€™s shoot action with a more efficient learning model. Moreover, changing computational-intensive algorithms with an extremely fast learning model like logistic regression, agents are now more responsive in the predetermined timeframe of 0.1s. 
 
-- RoboCup Soccer Simulator Homepage: http://sserver.sf.net/
-- RoboCup Official Homepage: http://www.robocup.org/
-
-- librcsc Homepage: http://rctools.sourceforge.jp/
-
-============
-Í×µá¥é¥¤¥Ö¥é¥ê
-============
-agent2d-3.1.1 ¤Ï°Ê²¼¤Î¥é¥¤¥Ö¥é¥ê¤òÍ×µá¤·¤Þ¤¹¡¥
-
- - boost-1.32 or later
- - librcsc-4.1.x
-
-=====
-¥Ó¥ë¥É
-=====
-¥Ñ¥Ã¥±¡¼¥¸¤òÅ¸³«¤·¤¿¥Ç¥£¥ì¥¯¥È¥êÆâÉô¤Ç°Ê²¼¤Î¥³¥Þ¥ó¥É¤ò¼Â¹Ô¤·¤Þ¤¹:
-
-./configure
-make
-
-librcsc¤ò¥·¥¹¥Æ¥à¤Î¥Ç¥£¥ì¥¯¥È¥ê¤Ë¥¤¥ó¥¹¥È¡¼¥ë¤·¤Æ¤¤¤Ê¤¤¾ì¹ç¡¤°Ê²¼¤Î¤è
-¤¦¤Ëconfigure¤Î'--with-librcsc'¥ª¥×¥·¥ç¥ó¤Ë¤è¤Ã¤Ælibrcsc¤Î¥¤¥ó¥¹¥È¡¼¥ë
-¥Ñ¥¹¤ò»ØÄê¤·¤Ê¤±¤ì¤Ð¤Ê¤ê¤Þ¤»¤ó¡¥
-
-./configure --with-librcsc=/path/to/prefix
-
-¤³¤Î¾ì¹ç¡¤´Ä¶­ÊÑ¿ô LD_LIBRARY_PATH ¤âÀßÄê¤¹¤ëÉ¬Í×¤¬¤¢¤ë¤«¤â¤·¤ì¤Þ¤»¤ó¡¥
-
-=================
-¥¤¥ó¥¹¥È¡¼¥ë»þ¤ÎÀßÄê
-=================
-agent2d¤ò¥Ó¥ë¥É¤¹¤ëÁ°¤Ë¡¤¥Ñ¥Ã¥±¡¼¥¸¤Ë´Þ¤Þ¤ì¤ëconfigure¥¹¥¯¥ê¥×¥È¤Î¥ª¥×
-¥·¥ç¥ó¤Ë¤è¤Ã¤ÆÀßÄê¤òÊÑ¹¹¤¹¤ë¤³¤È¤¬¤Ç¤­¤Þ¤¹¡¥configure¤Ç»ØÄê¤Ç¤­¤ë¥ª¥×
-¥·¥ç¥ó¤Î¾ÜºÙ¤Ï¡¤'configure --help'¤ò¼Â¹Ô¤¹¤ë¤³¤È¤Ç»²¾È¤Ç¤­¤Þ¤¹¡¥
-
-==========
-¥Á¡¼¥à¤Îµ¯Æ°
-==========
-agent2d¤Î¥Á¡¼¥à¤òµ¯Æ°¤¹¤ë¤Ë¤Ï¡¤src¥Ç¥£¥ì¥¯¥È¥êÆâ¤Ç°Ê²¼¤Î¥³¥Þ¥ó¥É¤ò¥¿¥¤
-¥×¤·¤Þ¤¹¡¥
-
-`./start.sh'
+##Credit 
+This work it built on top of HELIOS Base. 
+Akiyama H., Nakashima T. (2014) HELIOS Base: An Open Source Package for the RoboCup Soccer 2D Simulation. In: Behnke S., Veloso M., Visser A., Xiong R. (eds) RoboCup 2013: Robot World Cup XVII. RoboCup 2013. Lecture Notes in Computer Science, vol 8371. Springer, Berlin, Heidelberg9-5262.
