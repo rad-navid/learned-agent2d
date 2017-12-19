@@ -36,7 +36,7 @@ config_dir="${DIR}/formations-dt"
 coach_conf="${DIR}/coach.conf"
 team_graphic="--use_team_graphic off"
 
-number=11
+number=5
 usecoach="true"
 
 unum=0

@@ -62,7 +62,10 @@ private:
     bool doTurnNeckToShootPoint( rcsc::PlayerAgent * agent,
                                  const rcsc::Vector2D & shoot_point );
 
-    void mlLog( rcsc::PlayerAgent * agent,const rcsc::Vector2D & shoot_point, const double vel );
+    bool preCheckShoot(rcsc::PlayerAgent * agent);
+    bool preCheckShoot(rcsc::PlayerAgent * agent,const rcsc::Vector2D & shoot_point, const double vel);
+    void mlLog(rcsc::PlayerAgent * agent,const rcsc::Vector2D & shoot_point, const double vel);
+    void mlLog( rcsc::PlayerAgent * agent);
 };
 
 #endif

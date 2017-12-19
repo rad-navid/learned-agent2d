@@ -168,6 +168,7 @@ Bhv_BasicOffensiveKick::execute( PlayerAgent * agent )
                                drib_angle - 30.0,
                                drib_angle + 30.0 );
         // opponent check with goalie
+
         if ( ! wm.existOpponentIn( sector, 10, true ) )
         {
             const int max_dash_step

@@ -45,7 +45,7 @@ sleepprog=sleep
 goaliesleep=1
 sleeptime=0
 
-debugopt=" --debug "
+debugopt=""
 coachdebug=""
 
 offline_logging=""

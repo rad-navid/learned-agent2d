@@ -91,6 +91,7 @@ using namespace std;
 #include <string>
 #include <cstdlib>
 static int last_goal=0;
+static int log_file_index = 0;
 
 using namespace rcsc;
 
@@ -632,19 +633,20 @@ bool
 SamplePlayer::doShoot()
 {
 
-	/*
-	 * ofstream myfile;
-        	myfile.open("NavidCup.txt",ios::app);
-        	myfile <<  "Time:";myfile << wm.time().cycle();myfile << "  target:";myfile << best_shoot->target_point_.x;
-        	myfile << best_shoot->target_point_.y;myfile <<one_step_speed;myfile << "  \n";
-        	myfile.close();
-	 */
 
-	//std::cout <<  "%%%%%%%%%    Navid this is just a test   %%%%%%%%%%%%%%%%%%%%%%% \n";
 
     const WorldModel & wm = this->world();
 
-
+    // build log index
+	if(wm.time().cycle() ==  2)
+	{
+		ifstream filename;
+		filename.open("/home/navid/robo/log/log_index.txt");
+		if (!filename)
+		    cerr << "Unable to open file datafile.txt";
+		filename >> log_file_index;
+		filename.close();
+	}
 
     dlog.addText( Logger::TEAM,__FILE__": shooted" );
 
@@ -681,7 +683,10 @@ SamplePlayer::doShoot()
 
     		last_goal = ourScore;
     		ofstream myfile;
-    		myfile.open("/home/navid/robo/ml-goal-count-log.txt", ios::app);
+    		std::stringstream log_file_name_tmp;
+    		log_file_name_tmp << "/home/navid/robo/log/goals" << log_file_index << ".txt";
+    		std::string log_file_name = log_file_name_tmp.str();
+    		myfile.open(log_file_name.c_str() , ios::app);
     		myfile << wm.time().cycle()<<"\t"<< ourScore<< std::endl;
     		myfile.close();
 	}
@@ -713,6 +718,15 @@ SamplePlayer::doShoot()
         }
 
      */
+
+	if (wm.time().cycle() > 2990 &&  wm.time().cycle() % 3==0) {
+		ofstream filename;
+		filename.open("/home/navid/robo/log/log_index.txt");
+		if (!filename)
+			cout << "cannot open file";
+		filename << log_file_index + 1 << std::endl;
+		filename.close();
+	}
 
     return false;
 }
